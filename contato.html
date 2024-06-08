@@ -33,7 +33,7 @@
     
     <section class="secao-formulario">
         <div class="secao-formulario-titulo">
-            <h1>Entre em contato!</h1>
+            <h1 class="screen-mid-txt-title">Entre em contato!</h1>
         </div>
 
         <div class="secao-formulario-paragrafo">
@@ -41,23 +41,45 @@
         </div>    
 
         <div class="secao-formulario-conteudo">
-            <form action="" method="POST">
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required><br><br>
-        
-                <label for="telefone">Telefone:</label><br>
-                <input type="tel" id="telefone" name="telefone" required><br><br>
-        
-                <label for="mensagens">Comentários:</label><br>
-                <textarea id="mensagens" name="mensagens" rows="4" cols="50" required></textarea><br><br>
-        
+            <form action="#" method="POST">
+                <div class="formulario-coluna">
+                    <label for="nome">Nome:<br><input type="text" id="nome" name="nome" required></label>
+                    <label for="email">Email:<br><input type="email" id="email" name="email" required></label>
+                </div>
+                
+                <div class="formulario-coluna">
+                    <label for="tel">Telefone:<br><input type="phone" id="tel" name="tel" required></label>
+                    <label for="cidade">Cidade:<br><input type="text" id="cidade" name="cidade" required></label>
+                </div>
+                
+                <div class="formulario-coluna">
+                    <label for="estado">Estado:<br><input type="text" id="estado" name="estado" required></label>
+                    <label for="nascimento">Nascimento:<br><input type="date" id="nascimento" name="nascimento" required></label>
+                </div>
+                
+                <label for="escolaridade" style="width: 100%;">Escolaridade:<br>
+                    <select id="escolaridade" name="escolaridade" required>
+                        <option value="fundamental">Ensino Fundamental</option>
+                        <option value="medio">Ensino Médio</option>
+                        <option value="tecnico">Ensino Técnico</option>
+                        <option value="superior">Ensino Superior</option>
+                        <option value="pos-graduacao">Pós-Graduação</option>
+                        <option value="mestrado">Mestrado</option>
+                        <option value="doutorado">Doutorado</option>
+                        <option value="pos-doutorado">Pós-Doutorado</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </label>
+                
+                <label for="comentario" style="width: 100%;">Comentário:<br><textarea id="comentario" name="comentario" rows="4" required></textarea></label>
                 <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
             </form>
         </div>
     </section>
 
     <footer class="rodape">
-        <p>Desenvolvido por: <a href="https://github.com/vilasbtw" target="_blank">Kaique Vilas Boa</a></p>
+        <p>Desenvolvido por: <a href="https://github.com/vilasbtw" target="_blank">Kaique Vilas Boa</a> e <a href="https://github.com/andineto" target="_blank">Anderson Neto</a></p>
         <p>Em conjunto com <a href="https://hto.ifsp.edu.br/institucional/" target="_blank">Instituto Federal de Hortolândia</a></p>
     </footer>    
 </body>
