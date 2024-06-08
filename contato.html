@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Direitos Humanos</title>
+    <title>Contato</title>
 </head>
 <body>
     <header>
         <div class="menu-acessibilidade">
-        <ul>
-            <li>Alto Contraste</li>
-            <li>Aumentar Fonte</li>    
-        <ul>    
+            <ul>
+                <li>Alto Contraste</li>
+                <li>Aumentar Fonte</li>
+            </ul>
         </div>
         <div class="menu-paginas">
             <div class="menu-paginas-foto">
@@ -23,21 +23,42 @@
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="direitos.html">Direitos Humanos</a></li>
-                    <li><a href="quem.html">Quem Somos?</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                     <li><a href="projetos.html">Sobre o Projeto</a></li>
+                    <li><a href="quem.html">Quem Somos?</a></li>
                 </ul>
             </div>
-        </header>
+        </div>
+    </header>
     
-        <section class="secao-formulario">
-            <div>
-                
-            </div>
-        </section>
+    <section class="secao-formulario">
+        <div class="secao-formulario-titulo">
+            <h1>Entre em contato!</h1>
+        </div>
 
-        <footer class="rodape">
-            <p>Desenvolvido por: <a href="https://github.com/vilasbtw" target="_blank">Kaique Vilas Boa</a></p>
-            <p>Em conjunto com <a href="https://hto.ifsp.edu.br/institucional/" target="_blank">Instituto Federal de Hortolândia</a></p>
-        </footer>    
+        <div class="secao-formulario-paragrafo">
+            <p>Se tiver dúvidas, sugestões ou gostaria de saber mais sobre nossos projetos, por favor, entre em contato conosco.</p>
+        </div>    
+
+        <div class="secao-formulario-conteudo">
+            <form action="" method="POST">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+        
+                <label for="telefone">Telefone:</label><br>
+                <input type="tel" id="telefone" name="telefone" required><br><br>
+        
+                <label for="mensagens">Comentários:</label><br>
+                <textarea id="mensagens" name="mensagens" rows="4" cols="50" required></textarea><br><br>
+        
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>Desenvolvido por: <a href="https://github.com/vilasbtw" target="_blank">Kaique Vilas Boa</a></p>
+        <p>Em conjunto com <a href="https://hto.ifsp.edu.br/institucional/" target="_blank">Instituto Federal de Hortolândia</a></p>
+    </footer>    
 </body>
 </html>

@@ -4,20 +4,15 @@
     box-sizing: border-box;
 }
 
-img {
+img, iframe {
     width: 100%;
     height: 100%;
-}
-
-iframe {
-    height: 100%;
-    width: 100%;
 }
 
 ul {
     list-style: none;
-    gap: 50px;
     display: flex;
+    gap: 50px;
 }
 
 .menu-acessibilidade {
@@ -50,44 +45,65 @@ ul {
     width: 100%;
 }
 
-.conteudo {
-    background-image: url('img/apresentacao.jpg');
-    background-size: cover;
-    background-position: center;
-    color: black;
-    padding: 130px;
+.conteudo-imagem {
+    height: 600px;
 }
 
-.conteudo-apresentacao h1 {
-    margin-bottom: 40px;
-    font-size: 80px;
+.frase-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
 }
 
-.screen-left {
+.frase {
+    font-size: 45px;
+    font-weight: 300;
+    max-width: 65%;
+}
+
+.nome {
+    margin-left: 44rem;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.screen-left,
+.screen-mid {
     display: flex;
     height: 500px;
 }
 
-.screen-left-txt {
+.screen-left-txt,
+.screen-mid-txt {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 60%;
-    padding: 80px 80px 60px 80px;
+    padding: 60px;
 }
 
-.screen-left-txt-title {
+.screen-left-txt-title,
+.screen-mid-txt-title {
+    padding-top: 40px;
     font-size: 45px;
 }
 
-.screen-left-txt-paragraph {
+.screen-left-txt-paragraph,
+.screen-mid-txt-paragraph {
     margin-top: 40px;
     font-weight: 400;
 }
 
-.screen-left-img {
+.screen-left-img,
+.screen-mid-img {
     padding: 50px;
     width: 40%;
 }
 
-.screen-left-img-photo {
+.screen-left-img-photo,
+.screen-mid-img-photo {
     height: 400px;
     padding-bottom: 15px;
 }
@@ -103,12 +119,34 @@ ul {
     font-size: 10px;
 }
 
+.secao-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
 
+.secao-formulario-paragrafo {
+    padding: 30px;
+}
 
 footer a {
     color: white;
 }
 
+.secao-formulario-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 25px;
+    border: 2px solid #ccc;
+}
+
+/* Responsividade */
 @media (max-width: 1050px) {
     .menu-acessibilidade {
         display: flex;
@@ -132,50 +170,54 @@ footer a {
         gap: 10px;
     }
 
-    .conteudo {
-        padding: 45px 15px;
+    .conteudo-imagem {
+        margin-top: 50px;
+        height: 400px;
     }
 
-    .conteudo-apresentacao-titulo h1 {
-        width: 100%;
-        font-size: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 50px;
+    .frase-div {
+        margin: 50px 0;
+        height: 200px;
     }
 
-    .screen-left {
+    .frase {
+        font-size: 30px;
+    }
+
+    .nome {
+        margin: 0;
+    }
+
+    .screen-left,
+    .screen-mid {
         justify-content: center;
         align-items: center;
         flex-direction: column;
         height: 100%;
-        padding-top: 40px;
-    }
-    
-    .screen-left-txt {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-    
-    .screen-left-txt-title {
-        font-size: 15px;
-    }
-    
-   .screen-left-txt-paragraph {
-        width: 75%;
-        font-size: 13px;
     }
 
-    .screen-left-txt-paragraph {
-        padding-bottom: 30px;
+    .screen-left-txt,
+    .screen-mid-txt {
+        justify-content: center;
+        padding: 0;
     }
-    
-   .screen-left-img {
+
+    .screen-left-txt-title,
+    .screen-mid-txt-title {
+        width: 300px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .screen-left-txt-paragraph,
+    .screen-mid-txt-paragraph {
+        text-align: center;
+        font-size: 13px;
+        padding-bottom: 25px;
+    }
+
+    .screen-left-img,
+    .screen-mid-img {
         padding: 25px;
         width: 80%;
         display: flex;
@@ -183,8 +225,9 @@ footer a {
         justify-content: center;
         align-items: center;
     }
-    
-    .screen-left-img-photo {
+
+    .screen-left-img-photo,
+    .screen-mid-img-photo {
         height: 250px;
         padding-bottom: 12px;
     }
@@ -192,5 +235,4 @@ footer a {
     .footer {
         font-size: 1px;
     }
-
 }
