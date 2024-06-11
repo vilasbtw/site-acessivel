@@ -1,21 +1,16 @@
 var darkModeOn = false;
+var fontSizeBig = false;
 const body = document.body;
-var header = document.getElementsByClassName("menu-paginas-links");
 var footer = document.getElementsByClassName("rodape");
+var textElements = document.querySelectorAll("body, body *:not(script):not(style):not(header ul):not(iframe)");
+
 
 function darkMode() {
   body.style.backgroundColor = "black";
   body.style.color = "yellow";
-  
-  header[0].style.backgroundColor = "black";
 
+  // DEIXA A IMAGEM COM FUNDO BRANCO PARA CONTINUAR APARECENDO
   document.getElementById("menuImg").style.backgroundColor = "white";
-  
-  let menuItems = document.querySelectorAll('.menu-paginas-links a'); 
-  console.log(menuItems);
-  menuItems.forEach(item => {
-    item.style.color = "yellow"; 
-  });
   
   footer[0].style.backgroundColor = "black";
   footer[0].style.color = "yellow";
@@ -26,18 +21,12 @@ function darkMode() {
 function lightMode() {
   body.style.backgroundColor = "";
   body.style.color = "";
-  header[0].style.backgroundColor = "";
-  let menuItems = document.querySelectorAll('.menu-paginas-links a'); 
-  console.log(menuItems);
-  menuItems.forEach(item => {
-    item.style.color = ""; 
-  });
   footer[0].style.backgroundColor = "";
   footer[0].style.color = "";
   darkModeOn = false;
 }
 
-function toggleMode() {
+function toggleDarkMode() {
   console.log(darkModeOn);
   if (darkModeOn) {
     lightMode();
@@ -46,4 +35,27 @@ function toggleMode() {
   }
 }
 
-document.getElementById("ac").addEventListener("click", toggleMode);
+function increaseFontSize(){
+  document.body.style.fontSize = 'xx-large';
+  footer[0].style.fontSize = 'x-large';
+  fontSizeBig = true
+}
+
+function reduceFontSize(){
+  textElements.forEach(element => {
+      element.style.fontSize = "";
+  });
+  fontSizeBig = false;
+}
+
+function toggleFontSize(){
+  if (fontSizeBig){
+    reduceFontSize();
+  } else {
+    increaseFontSize();
+  }
+  }
+
+
+document.getElementById("ac").addEventListener("click", toggleDarkMode);
+document.getElementById("af").addEventListener("click", toggleFontSize);
