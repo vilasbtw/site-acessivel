@@ -222,7 +222,7 @@ ul {
 
  /* MUDAR COR PARA AMARELO QUANDO CLICAR NO AUTO CONTRASTE*/
 .quem-somos-link a {
-    color: black;
+    color: inherit;
 }
 
 form {
